@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Expess from "./component/UI/Expess";
 import FormInput from "./component/inputForm/FormInput";
 const expenses = [
@@ -24,16 +24,13 @@ const expenses = [
 ];
 function App() {
   const [data, setData] = useState(expenses);
+
   return (
     <div className="App">
       <h1>Get redy</h1>
+      <FormInput setData1={setData} data={data}></FormInput>
       <Expess item={data}></Expess>
-      <FormInput setData={setData} data={data}></FormInput>
-      {/* <FirtReactItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date}></FirtReactItem>
-      <FirtReactItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date}></FirtReactItem>
-      <FirtReactItem title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date}></FirtReactItem>
-      <FirtReactItem title={expenses[3].title} amount={expenses[3].amount} date={expenses[3].date}></FirtReactItem> */}
-    </div>
+    </div >
   );
 }
 

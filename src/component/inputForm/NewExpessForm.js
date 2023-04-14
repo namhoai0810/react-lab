@@ -1,11 +1,11 @@
-import FormInput from "./FormInput";
+// import FormInput from "./FormInput";
 
-const NewExpessForm = () => {
-  return (
-    <div>
-      <FormInput></FormInput>
-    </div>
-  );
-};
+// const NewExpessForm = () => {
+//   return (
+//     <div>
+//       <FormInput setData={setData} data={data}></FormInput>
+//     </div>
+//   );
+// };
 
-export default NewExpessForm;
+// export default NewExpessForm;

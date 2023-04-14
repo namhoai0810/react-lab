@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./FormInput.css";
 
 function FormInput(props) {
-  console.log(props);
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -22,12 +21,12 @@ function FormInput(props) {
     e.preventDefault();
     let newData = [...props.data];
     newData.push({
-      id: newData.length + 1,
+      id: (newData.length + 1).toString(),
       title: enteredTitle,
-      amount: enteredAmount,
-      date: enteredDate,
+      amount: +enteredAmount,
+      date: new Date(enteredDate),
     });
-    props.setData(newData);
+    props.setData1(newData);
   };
 
   return (
